@@ -1,5 +1,6 @@
 const button = document.querySelector('button')
-button.addEventListener('click', populateForm())
+const contact = document.querySelector('.contact')
+button.addEventListener('click', () => populateForm())
 
 const form = document.createElement('form');
 const nameInput = document.createElement('input');
@@ -9,7 +10,8 @@ const messageLabel = document.createElement('label');
 const formButton = document.createElement('button')
 
 function populateForm() {
-
+    identifyFormElements()
+    appendElements()
 }
 
 function identifyFormElements() {
@@ -26,7 +28,17 @@ function identifyFormElements() {
     messageInput.setAttribute('name', 'user_message')
 
     form.setAttribute('method', 'post')
+    formButton.innerText = 'Submit'
 
     nameInput.setAttribute('placeholder', 'John Smith')
     messageInput.setAttribute('placeholder', 'Keep improving and don\'t stop learning...')
+}
+
+function appendElements() {
+    form.appendChild(nameInput);
+    form.appendChild(nameLabel);
+    form.appendChild(messageInput);
+    form.appendChild(messageLabel);
+    form.appendChild(formButton);
+    contact.appendChild(form);
 }
