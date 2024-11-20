@@ -1,0 +1,77 @@
+:root {
+    --spacing: 1rem;
+}
+
+.card {
+    width: 500px;
+    margin: auto;
+}
+
+.hero {
+    display: flex;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+div > button {
+    padding: var(--spacing);
+    margin: auto;
+    display: block;
+}
+
+img {
+    border: 1px solid hotpink;
+}
+
+form {
+    border: 2px solid rgb(161, 147, 147);
+    border-radius: var(--spacing);
+    padding: var(--spacing);
+}
+
+button {
+    display: block;
+}
+
+label {
+    vertical-align: top;
+}
+
+textarea {
+    max-width: 400px;
+    max-height: 100px
+}
+
+#x {
+    list-style: url(./images/icons8-twitter.svg);
+}
+
+#linkedin {
+    list-style: url(./images/icons8-linkedin.svg);
+
+}
+
+#facebook {
+    list-style: url(./images/icons8-facebook.svg);
+
+}
+
+li {
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    color:  #551A8B;
+    position: relative;
+    bottom: 3px;
+}
+
+a:visited {
+    color:  #551A8B;
+}
