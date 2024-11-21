@@ -1,6 +1,7 @@
-const button = document.querySelector('button')
-const contact = document.querySelector('.contact')
-button.addEventListener('click', () => populateForm())
+let formExists = false;
+const button = document.querySelector('button');
+const contact = document.querySelector('.contact');
+button.addEventListener('click', () => populateForm());
 
 const form = document.createElement('form');
 const nameInput = document.createElement('input');
@@ -9,35 +10,44 @@ const messageInput = document.createElement('textarea');
 const messageLabel = document.createElement('label');
 const formButton = document.createElement('button');
 
-const paraName = document.createElement('p')
-const paraMsg = document.createElement('p')
+const paraName = document.createElement('p');
+const paraMsg = document.createElement('p');
 
 function populateForm() {
-    identifyFormElements()
-    appendElements()
+    if (!formExists)
+    {
+        identifyFormElements();
+        appendElements();   
+        formExists = true; 
+    }
+    else
+    {
+        deleteForm()
+        formExists = false;
+    }
 }
 
 function identifyFormElements() {
-    form.setAttribute('action', '/form-handling-example')
-    nameInput.setAttribute('id', 'name')
-    nameLabel.setAttribute('for', 'name')
-    messageInput.setAttribute('id', 'message')
-    messageLabel.setAttribute('for', 'message')
+    form.setAttribute('action', '/form-handling-example');
+    nameInput.setAttribute('id', 'name');
+    nameLabel.setAttribute('for', 'name');
+    messageInput.setAttribute('id', 'message');
+    messageLabel.setAttribute('for', 'message');
 
-    nameInput.setAttribute('type', 'name')
-    formButton.setAttribute('type', 'submit')
+    nameInput.setAttribute('type', 'name');
+    formButton.setAttribute('type', 'submit');
 
-    nameInput.setAttribute('name', 'user_name')
-    messageInput.setAttribute('name', 'user_message')
+    nameInput.setAttribute('name', 'user_name');
+    messageInput.setAttribute('name', 'user_message');
 
-    form.setAttribute('method', 'post')
-    formButton.innerText = 'Submit'
+    form.setAttribute('method', 'post');
+    formButton.innerText = 'Submit';
 
-    nameInput.setAttribute('placeholder', 'John Smith')
-    messageInput.setAttribute('placeholder', 'Keep improving and don\'t stop learning...')
+    nameInput.setAttribute('placeholder', 'John Smith');
+    messageInput.setAttribute('placeholder', 'Keep improving and don\'t stop learning...');
 
     nameLabel.innerText = 'Name: ';
-    messageLabel.innerText = 'Message: '
+    messageLabel.innerText = 'Message: ';
 }
 
 function appendElements() {
@@ -49,4 +59,8 @@ function appendElements() {
     form.appendChild(paraMsg);
     form.appendChild(formButton);
     contact.appendChild(form);
+}
+
+function deleteForm() {
+    contact.removeChild(form);
 }
