@@ -8,6 +8,7 @@
          url('./fonts/sf_cartoonist_hand-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: block;
 
 }
 
@@ -20,6 +21,7 @@
          url('./fonts/sf_cartoonist_hand_bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: block;
 
 }
 
@@ -32,6 +34,7 @@
          url('./fonts/sf_cartoonist_hand_bold_italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: block;
 
 }
 
@@ -44,6 +47,7 @@
          url('./fonts/sf_cartoonist_hand_italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: block;
 
 }
 
@@ -68,6 +72,7 @@
          url('./fonts/sf_cartoonist_hand_sc_bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: block;
 
 }
 
