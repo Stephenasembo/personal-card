@@ -7,7 +7,10 @@ const nameInput = document.createElement('input');
 const nameLabel = document.createElement('label');
 const messageInput = document.createElement('textarea');
 const messageLabel = document.createElement('label');
-const formButton = document.createElement('button')
+const formButton = document.createElement('button');
+
+const paraName = document.createElement('p')
+const paraMsg = document.createElement('p')
 
 function populateForm() {
     identifyFormElements()
@@ -32,13 +35,18 @@ function identifyFormElements() {
 
     nameInput.setAttribute('placeholder', 'John Smith')
     messageInput.setAttribute('placeholder', 'Keep improving and don\'t stop learning...')
+
+    nameLabel.innerText = 'Name: ';
+    messageLabel.innerText = 'Message: '
 }
 
 function appendElements() {
-    form.appendChild(nameInput);
-    form.appendChild(nameLabel);
-    form.appendChild(messageInput);
-    form.appendChild(messageLabel);
+    paraName.appendChild(nameLabel);
+    paraName.appendChild(nameInput);
+    paraMsg.appendChild(messageLabel);
+    paraMsg.appendChild(messageInput);
+    form.appendChild(paraName);
+    form.appendChild(paraMsg);
     form.appendChild(formButton);
     contact.appendChild(form);
 }
