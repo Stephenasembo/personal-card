@@ -44,7 +44,7 @@ function identifyFormElements() {
     formButton.innerText = 'Submit';
 
     nameInput.setAttribute('placeholder', 'John Smith');
-    messageInput.setAttribute('placeholder', 'Keep improving and don\'t stop learning...');
+    messageInput.setAttribute('placeholder', 'Don\'t stop improving yourself...');
 
     nameLabel.innerText = 'Name: ';
     messageLabel.innerText = 'Message: ';
